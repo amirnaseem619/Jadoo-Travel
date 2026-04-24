@@ -6,7 +6,13 @@
 }
 
 header {
-    height: 80vh;
+    height: auto;
+}
+.header-img img {
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
 
 .nav-logo-links {
@@ -19,12 +25,14 @@ header {
 
 .logo img {
     width: 5rem;
+    margin-left: -5.2rem;
 }
 
 .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-links a {
@@ -79,28 +87,33 @@ select:hover {
 }
 
 .box2 img {
-    width: 25rem;
+    width: 38rem;
+}
+.box2 {
+    z-index: 1;
 }
 
 .box1 {
     padding-top: 3rem;
+    margin-left: 2rem;
 }
 
 .box1 h1 {
-    font-size: 3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    font-family: Volkhov;
     font-weight: bold;
-    line-height: 3rem;
+    line-height: 4rem;
+    color: rgb(50, 41, 82);
 }
 
 .box1 h4 {
-    font-size: .80rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #DF6951;
 }
 
 .box1 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: rgb(61, 59, 59);
     margin-top: 1rem;
 }
@@ -114,19 +127,24 @@ select:hover {
 
 .two-buttons {
     display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 3rem;
+    margin-top: 3rem;
 }
 
 .two-buttons button {
     width: 8rem;
     height: 2.5rem;
     border: none;
-    background-color: orange;
+    background-color: #f1a501;
+    box-shadow: 0 8px 15px 2px rgba(241, 165, 1, 0.3);
     border-radius: 10px;
     font-size: .90rem;
     color: white;
+    transition: all 1s ease-in-out;
+}
 
+.two-buttons button:hover {
+    background-color: rgb(50, 41, 82);
 }
 
 .play-icon {
@@ -136,7 +154,11 @@ select:hover {
     border-radius: 50%;
     align-content: center;
     text-align: center;
+    transition: all 1s ease;
+}
 
+.play-icon:hover{
+    background-color: rgb(50, 41, 82);
 }
 
 .play-demo i {
@@ -154,6 +176,150 @@ select:hover {
     font-size: 1.5rem;
 }
 
+/* ======================= Main Section ======================= */
+main {
+    width: 100%;
+    height: auto;
+}
+/* ................. */
+.category-services-four-containers {
+    width: 100%;
+    height: auto;
+}
+
+.inner-main-container {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    padding: 1rem 0 0 0;
+}
+
+.inner-main-container h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #5E6282;
+}
+
+.inner-main-container h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    font-family: Volkhov;
+    color: #14183E;
+    padding-top: 1rem;
+}
+
+
+/* ============== 4 feature cards ================ */
+.cards-wrapper {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1100px;
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .cards-wrapper h3 {
+        font-size: 1.2rem;
+    }
+
+    /* ── OUTER WRAPPER ── */
+    .card-outer {
+      position: relative;
+      width: 240px;
+      padding-bottom: 28px;
+      padding-left: 14px;
+      cursor: pointer;
+    }
+
+    /* ── SVG DECORATION — behind the card ── */
+    .card-decoration {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 90px;
+      height: 90px;
+      z-index: 0;
+      transform: scale(0);
+      transform-origin: bottom left;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .card-outer:hover .card-decoration {
+      transform: scale(1);
+    }
+
+    /* ── WHITE CARD — on top of SVG decoration ── */
+    .card {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 30px 24px;
+      background: transparent;
+      border-radius: 16px;
+      text-align: center;
+      transition: background 0.35s ease,
+                  box-shadow 0.35s ease,
+                  transform 0.35s ease;
+    }
+
+    .card-outer:hover .card {
+      background: #ffffff;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+      transform: translateY(-4px);
+    }
+
+    /* ── Icon area ── */
+    .card-icon {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 80px;
+      height: 30vh;
+      margin-bottom: 20px;
+    }
+
+    .card-icon::before {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      
+      border-radius: 14px;
+      top: 10px;
+      right: -4px;
+      z-index: 0;
+    }
+
+    .card-icon svg {
+      position: relative;
+      z-index: 1;
+      width: 52px;
+      height: 52px;
+    }
+
+     .card-icon img {
+      width: 6rem;
+     }
+
+    /* ── Title ── */
+    .card-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+
+    /* ── Description ── */
+    .card-desc {
+      font-size: 13.5px;
+      color: #7a7a90;
+      line-height: 1.65;
+    }
+
 @media (max-width: 990px) {
 
     header {
@@ -161,6 +327,12 @@ select:hover {
         height: auto;
         overflow-x: hidden;
     }
+    .header-img img {
+    width: 40%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
 
     .nav-logo-links {
         width: 100%;
@@ -197,12 +369,11 @@ select:hover {
     }
 
     .header-contents {
-        width: 70%;
+        width: 80%;
         height: auto;
         margin: auto;
-        justify-content: space-around;
+        text-align: end;
         display: flex;
-        flex-direction: column;
     }
 
     .box1 {
@@ -219,13 +390,18 @@ select:hover {
     }
 
     .box1 h1 {
+        font-size: 2rem;
+        line-height: 1.8rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .box1 h4 {
         font-size: 1rem;
-        line-height: 1.3rem;
     }
 
     .box2 {
         width: 70%;
         height: auto;
+        margin: 2rem auto 0 auto;
     }
 
     .box2 img {
@@ -278,6 +454,7 @@ select:hover {
 
     .menu-icon {
         display: block;
+        z-index: 1;
     }
 
     .menu-icon i {
@@ -290,7 +467,8 @@ select:hover {
         top: 4rem;
         left: 0;
         width: 100%;
-        background-color: rgba(19, 19, 19, 0.7);
+        background-color: rgba(175, 172, 172, 0.5);
+        backdrop-filter: blur(5px);
         flex-direction: column;
         padding: 1.5rem 0;
         gap: 1rem;
@@ -314,7 +492,7 @@ select:hover {
         margin: 0 auto;
         height: 2rem;
         font-size: 0.9rem;
-        border: 2px solid rgb(209, 10, 10);
+        border: 2px solid rgb(167, 80, 9);
         color: white;
     }
 
@@ -323,7 +501,59 @@ select:hover {
         margin: 0 auto;
         height: 2rem;
         font-size: 0.9rem;
-        border: 2px solid rgb(209, 10, 10);
+        border: 2px solid rgb(185, 99, 12);
         color: white;
+    }
+
+    .header-contents {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .box1 {
+        z-index: 1;
+    }
+
+    .box1 h1 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .box1 h4 {
+        font-size: .80rem;
+    }
+}
+
+@media(min-width: 371px) and (max-width: 625px) {
+    .box1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .box1 h1 {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .box1 h4 {
+        font-size: .60rem;
+    }
+
+    .box1 p {
+        font-size: .60rem;
+    }
+
+    .two-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+}
+
+@media (max-width: 370px) {
+    .box2 img {
+        width: 10rem;
     }
 }
