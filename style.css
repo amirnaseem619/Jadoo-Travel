@@ -467,8 +467,7 @@ main {
         top: 4rem;
         left: 0;
         width: 100%;
-        background-color: rgba(175, 172, 172, 0.5);
-        backdrop-filter: blur(5px);
+        background-color: orange;
         flex-direction: column;
         padding: 1.5rem 0;
         gap: 1rem;
@@ -492,7 +491,7 @@ main {
         margin: 0 auto;
         height: 2rem;
         font-size: 0.9rem;
-        border: 2px solid rgb(167, 80, 9);
+        border: 2px solid black;
         color: white;
     }
 
@@ -501,7 +500,7 @@ main {
         margin: 0 auto;
         height: 2rem;
         font-size: 0.9rem;
-        border: 2px solid rgb(185, 99, 12);
+        border: 2px solid black;
         color: white;
     }
 
