@@ -347,13 +347,13 @@ main {
 }
 
 .cards-wrappers {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 1100px;
-    width: 100%;
-    margin-top: 2rem;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 1100px;
+  width: 100%;
+  margin-top: 2rem;
 }
 
 /* Card */
@@ -363,14 +363,15 @@ main {
   border: 1px solid #f4f1f1;
   border-radius: 20px;
   z-index: 1;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15),
-                0 15px 25px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.15),
+    0 15px 25px rgba(0, 0, 0, 0.08);
 }
 
 .card1 p {
   font-size: 1rem;
   color: rgb(87, 84, 84);
-  font-weight: bold;    
+  font-weight: bold;
 }
 
 .inner-image {
@@ -406,15 +407,150 @@ main {
   display: block;
 }
 
-.curley-decore img{
-    width: 6rem;
-    position: absolute;
-    right: 5rem;
-    transform: rotateX(180deg);
+.curley-decore img {
+  width: 6rem;
+  position: absolute;
+  right: 5rem;
+  transform: rotateX(180deg);
 }
 
-.curley-decore{
-    margin-top: 6rem;
+.curley-decore {
+  margin-top: 6rem;
+}
+
+/* ========================= Booking for next trip easy steps ========================= */
+
+.booking-easy-steps {
+  width: 100%;
+  height: auto;
+  margin: 3rem 0 0 0;
+}
+
+.inner-booking-container {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inner-booking-container h3 {
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: #5e6282;
+}
+
+.inner-booking-container h1 {
+  text-align: left;
+  font-size: 2.6rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #14183e;
+  padding-top: 1rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.step-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step .step-icon img {
+  width: 3.5rem;
+  margin-top: 1.5rem;
+}
+
+.h3-p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.h3-p p {
+  font-size: 1rem;
+  color: rgb(87, 84, 84);
+}
+
+/* ====== Booking Image ====== */
+.booking-image {
+  width: 30rem;
+  height: auto;
+  padding-top: 1rem;
+  border-radius: 25px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.15),
+    0 15px 25px rgba(0, 0, 0, 0.08);
+}
+
+.booking-image h2 {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  line-height: 3rem;
+  margin: 1rem 0 0 2rem;
+}
+
+.booking-image p {
+  font-size: 1rem;
+  color: rgb(159, 155, 155);
+  font-weight: 600;
+  margin: 0 0 0 2rem;
+}
+
+.image {
+  width: 25em;
+  height: 12em;
+  margin: 0 auto 0 auto;
+  border-radius: 18px;
+  background-image: url(images/Rectangle4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ==== ICONS ==== */
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0 0 2rem;
+}
+
+.leaf-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(220, 213, 213);
+  text-align: center;
+  align-content: center;
+}
+
+.leaf-img img {
+  width: 2rem;
+}
+
+/* GOING PEOPLE */
+.going-people {
+  display: flex;
+  align-items: end;
+  margin: 2rem 0 0 2rem;
+}
+
+.going-people img {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid white;
 }
 
 @media (max-width: 990px) {
@@ -537,11 +673,52 @@ main {
   .inner-main-containers h1 {
     font-size: 1.5rem;
     line-height: 1.5rem;
-  } 
+  }
 
   .inner-main-container h3,
   .inner-main-containers h3 {
     font-size: 1rem;
+  }
+
+  .inner-booking-container {
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .inner-booking-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    color: #5e6282;
+  }
+
+  .inner-booking-container h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+    color: #5e6282;
+  }
+
+  .curley-decore {
+    display: none;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step h3 {
+    margin-top: .5rem;
+  }
+
+  .booking-image h2, p {
+    text-align: center;
+  }
+
+  .icons, .going-people {
+    justify-content: center;
   }
 }
 
@@ -630,6 +807,73 @@ main {
   .box1 h4 {
     font-size: 0.8rem;
   }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step h3 {
+    margin-top: .5rem;
+    font-size: 1rem;
+  }
+
+  .step p {
+    text-align: center;
+    color: #9c9ca4;
+    font-size: .90rem;
+  }
+
+  .image {
+    width: 15em;
+    height: 10em;
+    background-image: url(images/Screenshot\ 2026-05-01\ 095304.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .leaf-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(220, 213, 213);
+    text-align: center;
+    align-content: center;
+  }
+
+  .leaf-img img {
+    width: 1.5rem;
+  }
+
+  .booking-image h2 {
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .booking-image p {
+    text-align: center;
+    font-size: .90rem;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  .going-people {
+    justify-content: center;
+  }
+
+  .going-people img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .going-people p {
+    font-size: .80rem;
+  }
 }
 
 @media (min-width: 371px) and (max-width: 625px) {
@@ -657,10 +901,33 @@ main {
     gap: 1rem;
     margin-top: 3rem;
   }
+
 }
 
 @media (max-width: 370px) {
   .box2 img {
     width: 10rem;
+  }
+
+  .image {
+    width: 10em;
+    height: 8em;
+  }
+
+  .leaf-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(220, 213, 213);
+    text-align: center;
+    align-content: center;
+  }
+
+  .leaf-img img {
+    width: 1rem;
+  }
+
+  .going-people p {
+    font-size: .70rem;
   }
 }
