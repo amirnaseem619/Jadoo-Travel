@@ -1,16 +1,16 @@
-const menuIcon = document.querySelector(".menu-icon i");
-const navLinks = document.querySelector(".nav-links");
-let isOpen = false;
-menuIcon.addEventListener("click", function(){
-navLinks.classList.toggle("show");
-if(!isOpen){
-    menuIcon.classList.remove("fa-bars");
-    menuIcon.classList.add("fa-xmark");
-    isOpen = true;
-}else{
-    menuIcon.classList.remove("fa-xmark");
-    menuIcon.classList.add("fa-bars");
-    isOpen = false;
-}
-}
-);
+const menuIcon = document.getElementById('open-menu');
+const closeIcon = document.getElementById('close-menu');
+const navLinks = document.querySelector('.nav-links');
+
+
+menuIcon.addEventListener('click', function(){
+    navLinks.classList.add('show');
+    menuIcon.style.display = "none";
+    closeIcon.style.display = "block";
+});
+
+closeIcon.addEventListener('click', function(){
+    navLinks.classList.remove('show');
+    menuIcon.style.display = "block";
+    closeIcon.style.display = "none";
+});
