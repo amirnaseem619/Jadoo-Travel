@@ -553,6 +553,13 @@ main {
   border: 1px solid white;
 }
 
+/* close icon */
+ #close-menu {
+    position: absolute;
+    right: 0px;
+    display: none;
+  }
+
 @media (max-width: 990px) {
   header {
     width: 100%;
