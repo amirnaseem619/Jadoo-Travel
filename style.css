@@ -589,7 +589,7 @@ main {
 .contents-area p {
   font-size: 1rem;
   font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #5b5b5d;
   line-height: 4rem;
 }
@@ -597,7 +597,7 @@ main {
 .contents-area h1 {
   font-size: 2.5rem;
   font-family: sans-serif;
-  color: #181E4B;
+  color: #181e4b;
 }
 
 /* -------- Users Feedback Carousel -------- */
@@ -611,11 +611,13 @@ main {
   display: flex;
   align-items: center;
   /* Multi-layer box-shadow echoing the gradient background colors */
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow:
+    rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .profile-card {
-   background: linear-gradient(135deg, #100C08 0%, #95122C 100%);
+  background: linear-gradient(135deg, #100c08 0%, #95122c 100%);
 }
 
 /* Inner track — twice as wide, runs the slide animation */
@@ -679,7 +681,6 @@ main {
   margin-top: 0;
 }
 
-
 /* =============== Famous Airlines =============== */
 .airlines {
   width: 100%;
@@ -707,7 +708,6 @@ main {
   height: 2rem;
 }
 
-
 /* =============== SUBSCRIPTION CONTAINER =============== */
 .subscription-container {
   width: 100%;
@@ -729,7 +729,7 @@ main {
   min-height: 24rem;
   height: auto;
   position: relative;
-  background-color: #DFD7F9;
+  background-color: #dfd7f9;
   border-radius: 20px;
   border-top-left-radius: 120px;
   padding: 4.5rem 3rem;
@@ -758,7 +758,11 @@ main {
   height: 250px;
   bottom: -80px;
   left: -80px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
 }
 
 .subscription-contents::after {
@@ -766,7 +770,11 @@ main {
   height: 180px;
   top: -60px;
   right: -60px;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
 }
 
 .subscription-contents > * {
@@ -779,7 +787,7 @@ main {
   line-height: 1.4;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  color: #5E6282;
+  color: #5e6282;
   max-width: 55rem;
   margin: 0 auto;
   text-align: center;
@@ -809,13 +817,13 @@ main {
 }
 
 .email-icon:focus-within {
-  border-color: #5E3BE1;
+  border-color: #5e3be1;
   box-shadow: 0 0 0 3px rgba(94, 59, 225, 0.15);
 }
 
 .email-icon i {
   font-size: 18px;
-  color: #7E8299;
+  color: #7e8299;
   margin-right: 12px;
 }
 
@@ -825,14 +833,14 @@ main {
   padding: 18px 0;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: #14183E;
+  color: #14183e;
   border: none;
   background: transparent;
   outline: none;
 }
 
 .email-icon input::placeholder {
-  color: #A1A5B7;
+  color: #a1a5b7;
 }
 
 .email-subscribeBtn button {
@@ -841,7 +849,7 @@ main {
   border: none;
   font-weight: 600;
   font-size: 1rem;
-  background: linear-gradient(135deg, #FF946D 0%, #FF7D68 100%);
+  background: linear-gradient(135deg, #ff946d 0%, #ff7d68 100%);
   color: white;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(255, 125, 104, 0.35);
@@ -866,7 +874,7 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #747DEF 0%, #5E3BE1 100%);
+  background: linear-gradient(135deg, #747def 0%, #5e3be1 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -905,7 +913,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
   gap: 2.5rem;
 }
 
@@ -920,7 +928,7 @@ footer {
 
 .footer-logo p {
   font-size: 0.9rem;
-  color: #7E8299;
+  color: #7e8299;
   margin-top: 0.5rem;
   line-height: 1.5;
 }
@@ -947,7 +955,7 @@ footer {
 .more h3 {
   font-size: 1.2rem;
   margin-bottom: 0.25rem;
-  color: #100C08;
+  color: #100c08;
   font-weight: 600;
 }
 
@@ -956,13 +964,13 @@ footer {
 .more p {
   font-size: 0.9rem;
   margin: 0;
-  color: #7E8299;
+  color: #7e8299;
 }
 
 .company a,
 .contact a,
 .more a {
-  color: #7E8299;
+  color: #7e8299;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -970,7 +978,7 @@ footer {
 .company a:hover,
 .contact a:hover,
 .more a:hover {
-  color: white;
+  color: #f1a501;
 }
 
 .social-media {
@@ -998,7 +1006,9 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .facebook:hover,
@@ -1036,10 +1046,9 @@ footer {
   font-size: 16px;
 }
 
-
 .social-media p {
   font-size: 1rem;
-  color: #7E8299;
+  color: #7e8299;
   margin: 0;
   font-weight: 500;
   text-align: start;
@@ -1057,7 +1066,7 @@ footer {
 }
 
 .apple-store img {
-    filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 .play-store,
 .apple-store {
@@ -1068,37 +1077,42 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
+  transition: all .5s ease;
 }
-
 
 .play-store h4 {
-  font-size: .70rem;
+  font-size: 0.7rem;
 }
 .play-store p {
-  font-size: .70rem;
+  font-size: 0.7rem;
 }
-
 
 .apple-store h4 {
-  font-size: .70rem;
+  font-size: 0.7rem;
 }
 .apple-store p {
-  font-size: .70rem;
+  font-size: 0.7rem;
 }
 
+.play-store:hover,
+.apple-store:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: #100c08;
+}
 
 /* Responsiveness adjustments via Media Queries */
 @media (max-width: 768px) {
   .subscription-container {
     margin-top: 4rem;
   }
-  
+
   .subscription-contents {
     padding: 3.5rem 2rem;
     border-top-left-radius: 80px;
     min-height: 20rem;
   }
-  
+
   .send-msg {
     top: -15px;
     right: 15px; /* Keep inside screen boundaries on smaller viewports */
@@ -1110,23 +1124,23 @@ footer {
     padding: 3rem 1.5rem;
     border-top-left-radius: 60px;
   }
-  
+
   .email-subscribeBtn {
     flex-direction: column;
     width: 100%;
     gap: 12px;
     margin-top: 2rem;
   }
-  
+
   .email-icon {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .email-icon input {
     padding: 15px 0;
   }
-  
+
   .email-subscribeBtn button {
     width: 100%;
     padding: 15px 0;
@@ -1309,11 +1323,11 @@ footer {
   .feedback-inner-elements {
     justify-content: center;
   }
-  
-  .feedback-inner-elements h1{
+
+  .feedback-inner-elements h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #181E4B;
+    color: #181e4b;
   }
 
   .footer-logo {
