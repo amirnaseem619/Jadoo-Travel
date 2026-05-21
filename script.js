@@ -8,8 +8,6 @@ const cardsWrapper = document.querySelector(".cards-wrappers");
 // Booking Steps
 const bookingSteps = document.querySelector(".booking-steps");
 
-
-
 menuIcon.addEventListener("click", function () {
   navLinks.classList.add("show");
   menuIcon.style.display = "none";
@@ -21,8 +19,6 @@ closeIcon.addEventListener("click", function () {
   menuIcon.style.display = "block";
   closeIcon.style.display = "none";
 });
-
-
 
 // --> Cards Wrappers <--
 const cardsData = [
@@ -37,19 +33,19 @@ const cardsData = [
     image: "images/Rectangle2.jpg",
     place: "London, UK",
     price: "$4.2k",
-    days: "12 days trip"
+    days: "12 days trip",
   },
 
   {
     image: "images/Rectangle3.jpg",
     place: "Full Europe",
     price: "$15k",
-    days: "28 days trip"
-  }
+    days: "28 days trip",
+  },
 ];
 
-for(i = 0; i < cardsData.length; i++){
-    cardsWrapper.innerHTML += `
+for (i = 0; i < cardsData.length; i++) {
+  cardsWrapper.innerHTML += `
 
     <div class="card1">
     <div class="inner-image">
@@ -75,33 +71,34 @@ for(i = 0; i < cardsData.length; i++){
     `;
 }
 
-
 // --> BOOKING STEPS <--
 const bookingData = [
   {
     icon: "images/choose.png",
     title: "Select Destination",
-    subTitle: "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque."
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque.",
   },
   {
     icon: "images/payment.png",
     title: "Make Payment",
-    subTitle: "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque."
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque.",
   },
   {
     icon: "images/select.png",
     title: "Reach Airport on Selected Date",
-    subTitle: "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque."
+    subTitle:
+      "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque.",
   },
 ];
 
-
-for(k = 0; k < bookingData.length; k++){
+for (k = 0; k < bookingData.length; k++) {
   bookingSteps.innerHTML += `
 
   <div class="step">
               <div class="step-icon">
-                <img src=${bookingData[k].icon} alt="" />
+              <img src=${bookingData[k].icon} alt="" />
               </div>
               <div class="h3-p">
                 <h3>${bookingData[k].title}</h3>
@@ -111,6 +108,5 @@ for(k = 0; k < bookingData.length; k++){
               </div>
             </div>
 
-  `
+  `;
 }
-
