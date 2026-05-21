@@ -5,6 +5,9 @@ const navLinks = document.querySelector(".nav-links");
 // Cards wrapper
 const cardsWrapper = document.querySelector(".cards-wrappers");
 
+// Booking Steps
+const bookingSteps = document.querySelector(".booking-steps");
+
 
 
 menuIcon.addEventListener("click", function () {
@@ -21,7 +24,7 @@ closeIcon.addEventListener("click", function () {
 
 
 
-// Cards Wrappers
+// --> Cards Wrappers <--
 const cardsData = [
   {
     image: "images/Rectangle1.jpg",
@@ -72,4 +75,42 @@ for(i = 0; i < cardsData.length; i++){
     `;
 }
 
+
+// --> BOOKING STEPS <--
+const bookingData = [
+  {
+    icon: "images/choose.png",
+    title: "Select Destination",
+    subTitle: "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque."
+  },
+  {
+    icon: "images/payment.png",
+    title: "Make Payment",
+    subTitle: "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque."
+  },
+  {
+    icon: "images/select.png",
+    title: "Reach Airport on Selected Date",
+    subTitle: "Lorem ipsum dolor sit amet consectetur <br />adipisicing elit. Voluptates, deleniti itaque."
+  },
+];
+
+
+for(k = 0; k < bookingData.length; k++){
+  bookingSteps.innerHTML += `
+
+  <div class="step">
+              <div class="step-icon">
+                <img src=${bookingData[k].icon} alt="" />
+              </div>
+              <div class="h3-p">
+                <h3>${bookingData[k].title}</h3>
+                <p>
+                 ${bookingData[k].subTitle}
+                </p>
+              </div>
+            </div>
+
+  `
+}
 
