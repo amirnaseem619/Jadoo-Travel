@@ -596,7 +596,7 @@ main {
 
 .contents-area h1 {
   font-size: 2.5rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   color: #181E4B;
 }
 
@@ -677,6 +677,461 @@ main {
   color: white;
   font-family: sans-serif;
   margin-top: 0;
+}
+
+
+/* =============== Famous Airlines =============== */
+.airlines {
+  width: 100%;
+  height: auto;
+  margin: 3rem 0 0 0;
+}
+
+.grid-airlines {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 1rem 0 0 0;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#airline {
+  width: 8rem;
+  height: 5rem;
+}
+
+#airline-ex {
+  height: 2rem;
+}
+
+
+/* =============== SUBSCRIPTION CONTAINER =============== */
+.subscription-container {
+  width: 100%;
+  height: auto;
+  margin: 5rem 0 3rem 0;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.subscription-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.subscription-contents {
+  width: 100%;
+  min-height: 24rem;
+  height: auto;
+  position: relative;
+  background-color: #DFD7F9;
+  border-radius: 20px;
+  border-top-left-radius: 120px;
+  padding: 4.5rem 3rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* hides decorative elements if they bleed outside */
+  box-shadow: 0 20px 40px rgba(223, 215, 249, 0.35);
+}
+
+/* Premium background rings/decorations mimicking the original Jadoo design */
+.subscription-contents::before,
+.subscription-contents::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.subscription-contents::before {
+  width: 250px;
+  height: 250px;
+  bottom: -80px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.subscription-contents::after {
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.subscription-contents > * {
+  position: relative;
+  z-index: 2; /* Ensures text and buttons sit above background circles */
+}
+
+.subscription-contents h2 {
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #5E6282;
+  max-width: 55rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.email-subscribeBtn {
+  display: flex;
+  margin: 3rem auto 0 auto;
+  width: 100%;
+  max-width: 40rem;
+  height: auto;
+  justify-content: center;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.email-icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.email-icon:focus-within {
+  border-color: #5E3BE1;
+  box-shadow: 0 0 0 3px rgba(94, 59, 225, 0.15);
+}
+
+.email-icon i {
+  font-size: 18px;
+  color: #7E8299;
+  margin-right: 12px;
+}
+
+.email-icon input {
+  flex: 1;
+  width: 100%;
+  padding: 18px 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #14183E;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.email-icon input::placeholder {
+  color: #A1A5B7;
+}
+
+.email-subscribeBtn button {
+  padding: 0 2.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #FF946D 0%, #FF7D68 100%);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(255, 125, 104, 0.35);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.email-subscribeBtn button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 125, 104, 0.45);
+}
+
+.email-subscribeBtn button:active {
+  transform: translateY(0);
+}
+
+/* Note: we use relative positioning with container to keep paper plane float responsive */
+.send-msg {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #747DEF 0%, #5E3BE1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(94, 59, 225, 0.4);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.send-msg i {
+  color: white;
+  font-size: 18px;
+  transform: rotate(15deg);
+  margin: 0;
+}
+
+.send-msg:hover {
+  transform: translate(-3px, -3px) rotate(-10deg);
+  box-shadow: 0 15px 25px rgba(94, 59, 225, 0.55);
+}
+
+/* =============== F O O T E R =============== */
+footer {
+  width: 100%;
+  height: auto;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.footer-wrapper {
+  width: 90%;
+  min-height: 20rem;
+  height: auto;
+  padding: 4rem 2rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.footer-logo img {
+  width: 6rem;
+}
+
+.footer-logo {
+  text-align: start;
+  max-width: 15rem;
+}
+
+.footer-logo p {
+  font-size: 0.9rem;
+  color: #7E8299;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.company-contact-more {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.company,
+.contact,
+.more {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 0.75rem;
+}
+
+.company h3,
+.contact h3,
+.more h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  color: #100C08;
+  font-weight: 600;
+}
+
+.company p,
+.contact p,
+.more p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #7E8299;
+}
+
+.company a,
+.contact a,
+.more a {
+  color: #7E8299;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.company a:hover,
+.contact a:hover,
+.more a:hover {
+  color: white;
+}
+
+.social-media {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.social-media .icons {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+}
+
+.facebook,
+.instagram,
+.twitter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.facebook:hover,
+.instagram:hover,
+.twitter:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.facebook {
+  background-color: #106aff;
+}
+
+.instagram {
+  background: linear-gradient(120deg, #9e11f7, #fd09da, #ff2e2d, #fec008);
+}
+
+.twitter {
+  background-color: #3193c5;
+}
+
+.facebook a,
+.instagram a,
+.twitter a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.icons i {
+  color: white;
+  font-size: 16px;
+}
+
+
+.social-media p {
+  font-size: 1rem;
+  color: #7E8299;
+  margin: 0;
+  font-weight: 500;
+  text-align: start;
+}
+
+.app-store {
+  display: flex;
+  gap: 8px;
+}
+
+.play-store img,
+.apple-store img {
+  width: 25px;
+  height: 25px;
+}
+
+.apple-store img {
+    filter: brightness(0) invert(1);
+}
+.play-store,
+.apple-store {
+  display: flex;
+  width: 9rem;
+  height: 3rem;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+
+.play-store h4 {
+  font-size: .70rem;
+}
+.play-store p {
+  font-size: .70rem;
+}
+
+
+.apple-store h4 {
+  font-size: .70rem;
+}
+.apple-store p {
+  font-size: .70rem;
+}
+
+
+/* Responsiveness adjustments via Media Queries */
+@media (max-width: 768px) {
+  .subscription-container {
+    margin-top: 4rem;
+  }
+  
+  .subscription-contents {
+    padding: 3.5rem 2rem;
+    border-top-left-radius: 80px;
+    min-height: 20rem;
+  }
+  
+  .send-msg {
+    top: -15px;
+    right: 15px; /* Keep inside screen boundaries on smaller viewports */
+  }
+}
+
+@media (max-width: 540px) {
+  .subscription-contents {
+    padding: 3rem 1.5rem;
+    border-top-left-radius: 60px;
+  }
+  
+  .email-subscribeBtn {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 2rem;
+  }
+  
+  .email-icon {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .email-icon input {
+    padding: 15px 0;
+  }
+  
+  .email-subscribeBtn button {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 990px) {
@@ -860,6 +1315,10 @@ main {
     margin-bottom: 1rem;
     color: #181E4B;
   }
+
+  .footer-logo {
+    text-align: center;
+  }
 }
 
 @media (max-width: 371px) {
@@ -1014,6 +1473,15 @@ main {
   .going-people p {
     font-size: 0.8rem;
   }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .app-store {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 371px) and (max-width: 625px) {
@@ -1040,6 +1508,16 @@ main {
     display: flex;
     gap: 1rem;
     margin-top: 3rem;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .company,
+  .contact,
+  .more {
+    text-align: center;
   }
 }
 
@@ -1068,5 +1546,17 @@ main {
 
   .going-people p {
     font-size: 0.7rem;
+  }
+
+  .grid-airlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company,
+  .contact,
+  .more {
+    text-align: center;
   }
 }
