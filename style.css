@@ -610,7 +610,6 @@ main {
   border-radius: 20px;
   display: flex;
   align-items: center;
-  /* Multi-layer box-shadow echoing the gradient background colors */
   box-shadow:
     rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -625,7 +624,6 @@ main {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 1rem;
-  /* width is auto — flex makes it span all 10 cards */
   animation: slide 18s linear infinite;
   will-change: transform;
 }
@@ -648,7 +646,6 @@ main {
 /* Individual feedback card */
 .profile-card {
   flex: 0 0 260px;
-  /* fixed width, never shrinks */
   height: 17rem;
   background-color: #ffffff;
   border-radius: 16px;
@@ -681,7 +678,7 @@ main {
   margin-top: 0;
 }
 
-/* =============== Famous Airlines =============== */
+/* =============== FAMOUS AIRLINES =============== */
 .airlines {
   width: 100%;
   height: auto;
@@ -738,7 +735,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* hides decorative elements if they bleed outside */
+  overflow: hidden;
   box-shadow: 0 20px 40px rgba(223, 215, 249, 0.35);
 }
 
@@ -779,7 +776,7 @@ main {
 
 .subscription-contents > * {
   position: relative;
-  z-index: 2; /* Ensures text and buttons sit above background circles */
+  z-index: 2;
 }
 
 .subscription-contents h2 {
@@ -866,7 +863,6 @@ main {
   transform: translateY(0);
 }
 
-/* Note: we use relative positioning with container to keep paper plane float responsive */
 .send-msg {
   position: absolute;
   top: -20px;
